@@ -1,37 +1,26 @@
 import { Outlet, Link } from 'react-router-dom';
+import '../index.css';
 
 export default function Root() {
     return (
-        <>
-            <div id="sidebar">
-                <h1>React Router Test</h1>
-                <div>
-                    <form id="search-form" role="search">
-                        <input id="q" aria-label="Search contacts" placeholder="Search" type="search" name="q" />
-                        <div id="search-spinner" aria-hidden hidden={true} />
-                        <div className="sr-only" aria-live="polite"></div>
-                    </form>
-                    {/* <form method="post">
-                        <button type="submit">New</button>
-                    </form> */}
-                    <Link to={`/vehicles/create`}>
-                        <button type="button">New car</button>
-                    </Link>
-                </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to={`/vehicles/1/edit`}>Your Name</Link>
-                        </li>
-                        <li>
-                            <Link to={`/vehicles/2/edit`}>Your Friend</Link>
-                        </li>
-                    </ul>
-                </nav>
+        <div
+            style={{
+                margin: 'auto',
+                marginTop: '2%',
+                display: 'flex',
+                flexDirection: 'column',
+                placeItems: 'center',
+                width: '100vw',
+                height: '100vh',
+                textAlign: 'center',
+            }}
+        >
+            <div style={{ paddingBottom: '1%' }}>
+                <Link to={-1}>Back</Link>
             </div>
-            <div id="detail">
+            <div>
                 <Outlet />
             </div>
-        </>
+        </div>
     );
 }
