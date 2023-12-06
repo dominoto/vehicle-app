@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './Pages/Root';
 import ErrorPage from './Pages/ErrorPage';
 import MakeListPage from './Pages/MakeListPage';
+import ModelListPage from './Pages/ModelListPage';
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
                     {
                         path: '/',
                         element: <MakeListPage />,
+                    },
+                    {
+                        path: 'vehicleMakes/:MakeId',
+                        element: <ModelListPage />,
                     },
                 ],
             },
