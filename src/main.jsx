@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './Pages/Root';
 import ErrorPage from './Pages/ErrorPage';
-import MakeListPage from './Pages/MakeListPage';
+import ModelEditPage from './Pages/ModelEditPage';
+import ModelCreatePage from './Pages/ModelCreatePage';
 import ModelListPage from './Pages/ModelListPage';
+import MakeListPage from './Pages/MakeListPage';
 
 const router = createBrowserRouter([
     {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
                     {
                         path: 'vehicleMakes/:MakeId',
                         element: <ModelListPage />,
+                    },
+                    {
+                        path: 'vehicleMakes/:MakeId/vehicleModels/:Id/edit',
+                        element: <ModelEditPage />,
+                    },
+                    {
+                        path: 'vehicleMakes/:MakeId/vehicleModels/create',
+                        element: <ModelCreatePage />,
                     },
                 ],
             },
