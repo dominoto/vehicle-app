@@ -32,7 +32,7 @@ export default function MakeTable() {
         const selectedMake = event.data.Id;
         vehicleMakeStore.selectedVehicleMake = event.data;
         // Route to models list for the selected make
-        navigate(`/vehicleMakes/${selectedMake}`);
+        navigate(`/vehicle-app/vehicleMakes/${selectedMake}`);
     };
 
     // Get Make data to display in rows

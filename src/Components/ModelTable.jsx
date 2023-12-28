@@ -38,7 +38,7 @@ export default function ModelTable() {
         // Toggle edit mode
         VehicleModelStore.isCreate = false;
         // Route to the EditPage for the selected Model
-        navigate(`/vehicleMakes/${selectedMake}/vehicleModels/${selectedModel}/edit`);
+        navigate(`/vehicle-app/vehicleMakes/${selectedMake}/vehicleModels/${selectedModel}/edit`);
     };
 
     const onCreateClicked = () => {
@@ -46,7 +46,7 @@ export default function ModelTable() {
         // Toggle create mode
         VehicleModelStore.isCreate = true;
         // Route to the CreatePage for the selected Model
-        navigate(`/vehicleMakes/${selectedMake}/vehicleModels/create`);
+        navigate(`/vehicle-app/vehicleMakes/${selectedMake}/vehicleModels/create`);
     };
 
     // Get Model data to display in rows

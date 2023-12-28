@@ -10,7 +10,7 @@ import MakeListPage from './Pages/MakeListPage';
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/vehicle-app',
         element: <Root />,
         errorElement: <ErrorPage />,
         children: [
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
                 errorElement: <ErrorPage />,
                 children: [
                     {
-                        path: '/',
+                        path: '/vehicle-app/',
                         element: <MakeListPage />,
                     },
                     {
