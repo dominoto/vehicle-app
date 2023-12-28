@@ -1,7 +1,7 @@
 {
     "homepage": "http://dominoto.github.io/vehicle-app",
     "name": "vehicle-app",
-    "private": true,
+    "private": false,
     "version": "0.0.0",
     "type": "module",
     "scripts": {
